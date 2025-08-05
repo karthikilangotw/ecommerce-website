@@ -1,0 +1,36 @@
+# MCP Server Configuration for Browser Tools
+
+## Browser Tools MCP Server
+This configuration enables browser automation and screenshot capabilities through MCP servers.
+
+### Available Servers:
+1. **@agentdeskai/browser-tools-mcp** - Browser tools integration
+2. **@playwright/mcp** - Playwright automation tools
+
+### Configuration:
+```json
+{
+  "mcpServers": {
+    "browser-tools": {
+      "command": "npx",
+      "args": ["@agentdeskai/browser-tools-mcp"],
+      "env": {}
+    },
+    "playwright": {
+      "command": "npx", 
+      "args": ["@playwright/mcp"],
+      "env": {}
+    }
+  }
+}
+```
+
+### Usage:
+- Browser tools server provides screenshot and browser interaction capabilities
+- Playwright server provides advanced browser automation features
+- Both servers can be used together for comprehensive browser control
+
+### Notes:
+- Make sure you have the required browsers installed (Chrome, Firefox, Safari)
+- For Playwright, you may need to install browser binaries: `npx playwright install`
+- The servers will be available as tools in your AI assistant 
