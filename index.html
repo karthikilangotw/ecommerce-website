@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xml:lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -40,7 +40,7 @@
     <!-- Search Modal -->
     <div class="search-modal" id="searchModal">
         <div class="search-content">
-            <input type="text" placeholder="Search products..." id="searchInput">
+            <input type="text" placeholder="Search products..." id="searchInput" aria-label="Search products">
             <button class="search-close" id="searchClose" aria-label="Close search">
                 <i class="fas fa-times"></i>
             </button>
@@ -202,9 +202,12 @@
                     </div>
                 </div>
                 <form class="contact-form" id="contactForm">
-                    <input type="text" placeholder="Your Name" required>
-                    <input type="email" placeholder="Your Email" required>
-                    <textarea placeholder="Your Message" rows="5" required></textarea>
+                    <label for="contactName">Your Name</label>
+                    <input type="text" id="contactName" name="name" placeholder="Your Name" required>
+                    <label for="contactEmail">Your Email</label>
+                    <input type="email" id="contactEmail" name="email" placeholder="Your Email" required>
+                    <label for="contactMessage">Your Message</label>
+                    <textarea id="contactMessage" name="message" placeholder="Your Message" rows="5" required></textarea>
                     <button type="submit" class="submit-btn">Send Message</button>
                 </form>
             </div>
@@ -261,4 +264,4 @@
 
     <script src="script.js"></script>
 </body>
-</html> 
+</html>
